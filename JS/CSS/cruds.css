@@ -1,0 +1,556 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main .container {
+    background-color: #fff;
+}
+
+
+/*Start Header*/
+
+header .contain {
+    background-color: #111;
+}
+
+header .contain .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+header .contain .logo img {
+    width: 4%;
+}
+
+header .contain .name {
+    font-size: 35px;
+    color: #fff;
+}
+
+@media (max-width:992px) {
+    header .contain .logo {
+        padding: 8px;
+    }
+    header .contain .logo img {
+        width: 5%;
+    }
+    header .contain .name {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:768px) {
+    header .contain .logo {
+        padding: 5px;
+    }
+    header .contain .logo img {
+        width: 6%;
+    }
+    header .contain .name {
+        font-size: 25px;
+    }
+}
+
+
+/* End Header */
+
+
+/*Start Cruds*/
+
+.cruds .contain {
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cruds .contain img {
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cruds .contain .text {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #f2faff;
+    color: #111;
+    box-shadow: 2px 2px 30px 15px #ddd;
+    transition: ease-in-out .3s;
+    border: 2px solid transparent;
+    user-select: none;
+    border: 2px solid #0abf53;
+    box-shadow: 5px 5px 20px 20px #eee;
+}
+
+.cruds .contain .text .head {
+    font-size: 25px;
+    font-weight: 600;
+    transition: ease-in-out .3s;
+    color: #0abf53;
+}
+
+.cruds .contain .text p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cruds .contain .text p span {
+    letter-spacing: 2px;
+}
+
+.cruds .contain .text p span::first-letter {
+    color: #0abf53;
+}
+
+@media (max-width:992px) {
+    .cruds .contain {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .cruds .contain img {
+        width: 100%;
+    }
+    .cruds .contain .text {
+        padding: 12px;
+    }
+    .cruds .contain .text .head {
+        font-size: 25px;
+    }
+    .cruds .contain .text p {
+        gap: 5px;
+    }
+    .cruds .contain .text p span {
+        letter-spacing: 2px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:768px) {
+    .cruds .contain {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cruds .contain img {
+        width: 0%;
+    }
+    .cruds .contain .text {
+        padding: 15px;
+    }
+    .cruds .contain .text .head {
+        font-size: 25px;
+    }
+    .cruds .contain .text p span {
+        letter-spacing: 1.5px;
+    }
+}
+
+
+/* End Cruds */
+
+
+/*Start Section */
+
+section .contain {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: visible;
+}
+
+section .contain form {
+    display: grid;
+    justify-content: stretch;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+section .contain form.create .prices {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 80% 18%;
+    align-items: center;
+    gap: 10px;
+}
+
+section .contain form.create .cost {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+section .contain form.create .prices .total {
+    background-color: #8de4b0;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .contain form.create .prices .total span {
+    width: 100%;
+}
+
+section .contain input,
+section .contain button {
+    outline: none;
+    border: none;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #555;
+    width: 100%;
+    transition: ease-in-out .3s;
+    font-size: 18px;
+}
+
+section .contain input[type='text']:focus,
+section .contain input[type='number']:focus,
+section .contain input[type='search']:focus {
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+section .contain input[type='submit'] {
+    position: relative;
+    border-radius: 3px;
+    border: none;
+    color: #111;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 5;
+    transition: ease-in-out .3s;
+    border: 1px solid #555;
+}
+
+section .contain form.create .create {
+    position: relative;
+    overflow: hidden;
+}
+
+section .contain .create:hover>input {
+    border: 1px solid #007fdb;
+    color: #fff;
+}
+
+section .contain form.create .create::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #007fdb;
+    position: absolute;
+    transition: ease-in-out .3s;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50px);
+    z-index: 0;
+}
+
+section .contain form.create .create::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #007fdb;
+    position: absolute;
+    transition: ease-in-out .3s;
+    top: 50%;
+    transform: translateY(-50%) translateX(50px);
+    z-index: 0;
+}
+
+section .contain form.create .create:hover::before {
+    width: 50%;
+    border-radius: 0;
+    height: 100%;
+    transform: translateY(-50%) translateX(0px);
+}
+
+section .contain form.create .create:hover::after {
+    width: 50%;
+    border-radius: 0;
+    height: 100%;
+    transform: translateY(-50%) translateX(-100%);
+}
+
+section .contain input::placeholder,
+section .contain button::placeholder {
+    font-size: 15px;
+    color: #999;
+}
+
+section .contain form.search .search-btns {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+section .contain form.search .search-btns button {
+    transition: ease-in-out .3s;
+    cursor: pointer;
+}
+
+section .contain form.search .search-btns button:hover {
+    background-color: #007fdb;
+    color: #fff;
+    border: 1px solid #007fdb;
+}
+
+@media (max-width:992px) {
+    section .contain form.create .prices {
+        grid-template-columns: 80% 18%;
+    }
+    section .contain form.create .cost {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    section .contain form.create .prices .total {
+        font-size: 18px;
+        padding: 10px;
+    }
+    section .contain input {
+        padding: 15px;
+        font-size: 18px;
+    }
+    section .contain input[type='submit'] {
+        font-size: 18px;
+    }
+    section .contain input::placeholder {
+        font-size: 15px;
+    }
+    section .contain form.search .search-btns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width:768px) {
+    section .contain {
+        justify-content: stretch;
+    }
+    section .contain form.create .prices {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section .contain form.create .cost {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    section .contain form.create .prices .total {
+        font-size: 18px;
+        padding: 10px;
+    }
+    section .contain input {
+        padding: 12px;
+        font-size: 16px;
+    }
+    section .contain input[type='submit'] {
+        font-size: 16px;
+    }
+    section .contain input::placeholder {
+        font-size: 12px;
+    }
+    section .contain form.search .search-btns {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+}
+
+
+/* End Section */
+
+
+/* Start Footer */
+
+footer .contain {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 50px;
+}
+
+footer .contain form.delete button {
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    background-color: #007fdb;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+footer .contain form.delete button span {
+    color: #0abf53;
+}
+
+footer .contain .lists {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .contain .list {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 2% 14% repeat(3, 9%) 10% 10% 14% 10% 10%;
+    border-bottom: 2px solid #333;
+    text-align: center;
+    gap: 3px;
+}
+
+footer .contain .main-list .list:first-child span {
+    font-size: 18px;
+    color: #0abf53;
+}
+
+footer .contain .list span {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+
+footer .contain .list button {
+    outline: none;
+    border: none;
+    padding: 5px;
+    background-color: #007fdb;
+    color: #fff;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+footer .contain .list button:hover {
+    background-color: #0abf53;
+}
+
+@media (max-width:992px) {
+    footer .contain form.delete button {
+        font-size: 20px;
+        padding: 10px;
+    }
+    footer .contain .list {
+        grid-template-columns: 5% 15% repeat(1, 12%) 12% 13% 16% 12% 12%;
+        gap: 3px;
+    }
+    footer .contain .main-list .list:first-child span,
+    footer .contain .other-lists .list span {
+        font-size: 15px;
+    }
+    footer .contain .other-lists {
+        display: grid;
+        align-items: center;
+        justify-content: stretch;
+        grid-template-columns: repeat(1, 1f);
+        gap: 10px;
+    }
+    footer .contain .other-lists .list span:nth-child(4),
+    footer .contain .other-lists .list span:nth-child(5),
+    footer .contain .main-list .list span:nth-child(4),
+    footer .contain .main-list .list span:nth-child(5) {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    footer .contain form.delete button {
+        font-size: 20px;
+        padding: 10px;
+    }
+    footer .contain .list {
+        grid-template-columns: 5% 15% 15% 15% 18% 12% 12%;
+        gap: 3px;
+    }
+    footer .contain .main-list .list:first-child span,
+    footer .contain .other-lists .list span {
+        font-size: 13px;
+    }
+    footer .contain .other-lists {
+        display: grid;
+        align-items: center;
+        justify-content: stretch;
+        grid-template-columns: repeat(1, 1f);
+        gap: 10px;
+    }
+    footer .contain .other-lists .list span:nth-child(4),
+    footer .contain .other-lists .list span:nth-child(5),
+    footer .contain .other-lists .list span:nth-child(6),
+    footer .contain .main-list .list span:nth-child(4),
+    footer .contain .main-list .list span:nth-child(5),
+    footer .contain .main-list .list span:nth-child(6) {
+        display: none;
+    }
+    footer .contain .list button {
+        font-size: 12px;
+    }
+}
+
+
+/* End Footer */
+
+.contain {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    justify-content: stretch;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width:1200px) {
+    .contain {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+@media (max-width:992px) {
+    .contain {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+@media (max-width:768px) {
+    .contain {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}

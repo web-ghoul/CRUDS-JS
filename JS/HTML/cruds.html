@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/cruds.css">
+    <link rel="stylesheet" href="../CSS/Font.css">
+    <title>Cruds Operations With JS</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <header>
+                <div class="contain">
+                    <div class="logo">
+                        <img src="https://lukaszadam.com/assets/downloads/hero_image_2.svg" />
+                        <div class="name">webGhoul</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cruds">
+                <div class="contain">
+                    <img src="https://lukaszadam.com/monitor.svg" alt="">
+                    <div class="text">
+                        <div class="head">Cruds</div>
+                        <p>
+                            <span>Create</span>
+                            <span>Read</span>
+                            <span>Update</span>
+                            <span>Delete</span>
+                            <span>Search</span>
+                        </p>
+                    </div>
+                    <img src="https://lukaszadam.com/monitor.svg" alt="">
+                </div>
+            </div>
+
+            <section>
+                <div class="contain">
+                    <form class="create" action="">
+                        <div class="title">
+                            <input type="text" required placeholder="Title">
+                        </div>
+
+                        <div class="prices">
+                            <div class="cost">
+                                <input onkeyup="getTotal()" type="number" class="price" required placeholder="Price">
+                                <input onkeyup="getTotal()" type="number" class="taxes" required placeholder="Taxes in Precent">
+                                <input onkeyup="getTotal()" type="number" class="ads" required placeholder="Ads in Precent">
+                                <input onkeyup="getTotal()" type="number" class="dis" placeholder="Discount in Precent">
+                            </div>
+                            <div class="total">
+                                Total: <span></span>
+                            </div>
+                        </div>
+
+                        <div class="count">
+                            <input type="number" required placeholder="Count">
+                        </div>
+
+                        <div class="cat">
+                            <input type="text" required placeholder="Category">
+                        </div>
+
+                        <div class="create">
+                            <input type="submit" value="Create">
+                        </div>
+                    </form>
+
+                    <form class="search" action="">
+                        <div class="search-input">
+                            <input type="search" onkeyup="searchData(this.value)" id="search" placeholder="Search">
+                        </div>
+
+                        <div class="search-btns">
+                            <button type="button" onclick='getSearchMood(this.id)' id='searchByTitle'>Search By Title</button>
+                            <button type="button" onclick='getSearchMood(this.id)' id='searchByCat'>Search By Category</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <footer>
+                <div class="contain">
+                    <form action="" id='deleteAll' class="delete">
+
+                    </form>
+                    <div class="lists">
+                        <div class="main-list">
+                            <div class="list super">
+                                <span>Id</span>
+                                <span>Title</span>
+                                <span>Price</span>
+                                <span>Taxes</span>
+                                <span>Ads</span>
+                                <span>Discount</span>
+                                <span>Total</span>
+                                <span>Category</span>
+                                <span>update</span>
+                                <span>Delete</span>
+                            </div>
+                        </div>
+
+                        <div class="other-lists" id="lists"></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src='../JS/cruds.js'></script>
+</body>
+
+</html>
